@@ -251,7 +251,7 @@ class CustomerRegistrationView(View):
   if form.is_valid():
    messages.success(request, 'Congratulations!! Registered Successfully.')
    form.save()
-  return render(request, 'app/customerregistration.html', {'form':form})
+  return redirect('login')
 
 def custom_logout(request):
     logout(request)
